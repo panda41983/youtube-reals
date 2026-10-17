@@ -1,0 +1,72 @@
+#ytai-badge {
+  --ytai-color: #888;
+  position: fixed;
+  top: 72px;
+  right: 16px;
+  z-index: 2147483647;
+  width: 148px;
+  padding: 12px 14px 12px;
+  border-radius: 12px;
+  border-left: 5px solid var(--ytai-color);
+  background: rgba(20, 20, 20, 0.92);
+  color: #fff;
+  font-family: Roboto, Arial, sans-serif;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  transition: border-color 0.3s;
+}
+#ytai-badge[hidden] { display: none; }
+
+#ytai-badge .ytai-close {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  border: 0;
+  background: none;
+  color: #aaa;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+#ytai-badge .ytai-close:hover { color: #fff; }
+
+#ytai-badge .ytai-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #aaa;
+}
+#ytai-badge .ytai-score {
+  margin-top: 2px;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--ytai-color);
+}
+#ytai-badge .ytai-na { color: #888; }
+
+#ytai-badge .ytai-bar {
+  height: 5px;
+  margin: 6px 0 6px;
+  border-radius: 3px;
+  background: #444;
+  overflow: hidden;
+}
+#ytai-badge .ytai-bar > div {
+  height: 100%;
+  background: var(--ytai-color);
+  transition: width 0.4s;
+}
+#ytai-badge .ytai-note {
+  font-size: 12px;
+  color: #ddd;
+}
+
+#ytai-badge .ytai-spinner {
+  width: 22px;
+  height: 22px;
+  margin: 8px 0 6px;
+  border: 3px solid #555;
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: ytai-spin 0.8s linear infinite;
+}
+@keyframes ytai-spin { to { transform: rotate(360deg); } }

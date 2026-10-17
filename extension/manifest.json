@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube AI Detector",
+  "version": "1.0.0",
+  "description": "Shows the probability that a YouTube video is AI-generated, scored by a Slack agent.",
+  "host_permissions": ["http://127.0.0.1:8765/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["badge.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
